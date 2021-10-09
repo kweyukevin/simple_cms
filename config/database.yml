@@ -85,6 +85,10 @@ test:
 #
 production:
   <<: *default
-  database: simple_cms_production
-  username: simple_cms
-  password: <%= ENV['SIMPLE_CMS_DATABASE_PASSWORD'] %>
+  #host: postgres://dofkixyuykpzpl:1cce6f517baf9398e782b5f2b9928240452681a870c46ac216eda5bbfee67aca@ec2-54-147-76-191.compute-1.amazonaws.com:5432/d7g449rh5a7aqi
+  host: ec2-54-147-76-191.compute-1.amazonaws.com
+  database: d7g449rh5a7aqi
+  username: dofkixyuykpzpl
+  #password: <%= ENV['SIMPLE_CMS_DATABASE_PASSWORD'] %>
+  password: 1cce6f517baf9398e782b5f2b9928240452681a870c46ac216eda5bbfee67aca
+  port: 5432
