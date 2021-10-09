@@ -1,0 +1,26 @@
+<h1>Subjects#new</h1>
+<p>Find me in app/views/subjects/new.html.erb</p>
+
+<%= form_with model: @subject do |form| %>
+<div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %><br>
+    <% @subject.errors.full_messages_for(:name).each do |message| %>
+    <p style="color:red"><%= message %></p>
+    <% end %>
+</div>
+<div>
+    <%= form.label :position %><br>
+    <%= form.text_field :position %><br>
+    <% @subject.errors.full_messages_for(:position).each do |message| %>
+    <p style="color:red"><%= message %></p>
+    <% end %>
+</div>
+<div>
+    <%= form.label :visible %><br>
+    <%= form.check_box :visible %>
+</div>
+<div>
+    <%= form.submit %><br>
+</div>
+<% end %>
